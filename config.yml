@@ -1,0 +1,34 @@
+# Build Accelerator Configuration
+
+# Cache settings
+cache:
+  max_size_gb: 50
+  eviction_policy: lru
+  compression: zstd
+
+# Network topology
+network:
+  mode: mesh  # star, mesh, hybrid
+  discovery: mdns
+  port: 9877
+  max_peers: 16
+
+# Compiler fingerprinting
+compilers:
+  track_version: true
+  track_flags: true
+  track_includes: true
+  ignore_timestamps: false
+
+# Dashboard
+dashboard:
+  enabled: true
+  port: 9876
+  refresh_interval_ms: 2000
+
+# Logging
+logging:
+  level: info  # debug, info, warn, error
+  file: "${BUILDCACHE_HOME}/logs/buildcache.log"
+  max_size_mb: 100
+  rotate_count: 5

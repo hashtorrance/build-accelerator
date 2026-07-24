@@ -1,0 +1,16 @@
+{
+  "name": "default",
+  "description": "Default build accelerator agent",
+  "tools": ["read", "write", "shell", "grep", "glob", "code"],
+  "allowedTools": ["read", "grep", "glob"],
+  "toolsSettings": {
+    "shell": {
+      "allowedCommands": [".*"],
+      "autoAllowReadonly": true,
+      "denyByDefault": false
+    },
+    "write": {
+      "allowedPaths": ["**"]
+    }
+  }
+}

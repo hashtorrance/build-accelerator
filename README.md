@@ -67,10 +67,36 @@ The dashboard will be available at `http://localhost:9876/metrics`
 ### 5. Initialize Configuration
 
 Run the setup utility to initialize the build cache configuration:
+### Windows
+```bash
+# Navigate to source directory
+cd Windows/Payload_Source
 
-```cmd
-tools\setup.exe
+# Download dependencies (first time only)
+go mod tidy
+
+# Build
+go build -o setup.exe
+
+# Run
+./setup.exe
 ```
+
+### Linux
+```bash
+# Navigate to source directory
+cd Windows/Payload_Source
+
+# Download dependencies (first time only)
+go mod tidy
+
+# Build
+go build -o setup
+
+# Run
+./setup
+
+
 
 This will:
 - Verify prerequisites (Node.js, Windows SDK, MSBuild)
